@@ -1,0 +1,11 @@
+Functional requirements of virtual university :-
+
+1.A university will have colleges, enroll the students.
+  University will conduct the exams and after evaluation, result will be declared.
+2.All Colleges are affiliated to a university. Students take admission to college.
+4.College offers courses like Btech,Mtech,MBA,MCA,BBA, BCA etc and students opt for a course whatever the college possess.
+3.Faculty will teach students and take the attendance of all the students.
+5.Sometime lecture can be taken by HOD of particular department.
+6.Principal controls and manages the whole college.
+7.There are some departments and single HOD is associated to it.
+8.Periodic exams are taken in college like monthly test and after evaluation, results are declared.
