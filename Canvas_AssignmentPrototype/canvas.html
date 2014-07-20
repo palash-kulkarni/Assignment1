@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+	
+	<head>
+	<script type="text/javascript" src="jquery.js" ></script>
+	<script type="text/javascript" src="CanvasScript.js" ></script>
+	<link rel="stylesheet" type="text/css" href="CanvasStyle.css"/>
+	</head>
+
+	<body>
+	         <div class="canvasBox"><canvas id="mycanvas" width="600" height="600" align="center"></canvas></div>	
+
+		 <form name="form">
+		 Enter Equation:<input type="text" name="equation" id="eq"/><br>
+		 Enter the steps:<input type="text" name="steps" id="steps"/><br>
+		 Starting point:<input type="text" name="start" id="start"/><br>
+		 Ending point:<input type="text" name="end" id="end"/><br>
+	    	 <input id="submit" type="button" value="submit" onclick="Canvas()">
+	    	 <input id="resetbtn" type="reset" value="reset" onclick="Graph.resetCanvas()">
+	    	 </form> 
+	</body>
+
+</html>
