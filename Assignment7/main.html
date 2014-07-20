@@ -89,10 +89,6 @@ $(document).ready(function()
 			});
 			
 			jQuery.each($("td"),function(index, value){
-				$(value).removeAttr("colored");
-				$(value).removeClass("red");
-				$(value).removeClass("blue");
-				$(value).removeClass("green");
 				$(value).css("background-color","#ccc");
 				$(value).html(index+1);
 			});
