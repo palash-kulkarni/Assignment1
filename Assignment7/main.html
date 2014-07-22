@@ -6,7 +6,7 @@
 
 
 
-<style src="mystyle.css"></style>
+<link rel="stylesheet" type="text/css" href="mystyle.css"/>
 
 <script src="jquery.js" type="text/javascript"></script>								
 
@@ -27,27 +27,28 @@ $(document).ready(function()
 			  $(this).css("border-color","white");
 	  });
   
-		$("td").click(function()
-		{
-				  var put_colour=$("input[type='radio'][name='color']:checked").val();  		//takes the value from radio button				
-				  if(put_colour==undefined)																	// if radio button is unchecked it means its value would be undefined
-				  {
-					   alert("Please select colour from Radio Button");
-				  }
-				  else																								// else if it is checked 			
-				  {
-					  if($(this).css("background-color")=="rgb(255, 0, 0)"||$(this).css("background-color")=="rgb(0, 255, 0)"||$(this).css("background-color")=="rgb(0, 0, 255)")
-					{
+	$("td").click(function()
+	{
+			  var put_colour=$("input[type='radio'][name='color']:checked").val();  		//takes the value from radio button				
+			  if(put_colour==undefined)																	// if radio button is unchecked it means its value would be undefined
+			  {
+				   alert("Please select colour from Radio Button");
+			  }
+			  else																								// else if it is checked 			
+			  {
+				  if($(this).css("background-color")=="rgb(255, 0, 0)"||$(this).css("background-color")=="rgb(0, 255, 0)"||$(this).css("background-color")=="rgb(0, 0, 255)")
+			          {
 					  alert("It is already coloured");														//check either cell is colour then show it is already coloured					
-					}
-					else
-					{
+			          }
+				  else
+				  {
 					  $(this).css("background-color",put_colour);										// if not then put colour on the cell of table
-					}
 				  }
-		});
+			  }
+	});
 	   
-	    $("#shufflebtn").click(function( ){																//on click shuffle button
+	$("#shufflebtn").click(function( )
+	{																//on click shuffle button
 			var loc = [];																						   //
 			var colorClass = [];	
 			
@@ -79,27 +80,24 @@ $(document).ready(function()
 				}
 			});
 			return false;
-	});
+	 });
 	   
 	   
-	   $("#resetbtn").click(function( ){																					//it reset the whole grid to default colour and number in sequence
+	 $("#resetbtn").click(function( )
+	 {																					//it reset the whole grid to default colour and number in sequence
 			
 			jQuery.each($("input:radio[name=colorRadio]"),function(index, value){
 				$(value).removeAttr("checked");
 			});
 			
 			jQuery.each($("td"),function(index, value){
-				$(value).removeAttr("colored");
-				$(value).removeClass("red");
-				$(value).removeClass("blue");
-				$(value).removeClass("green");
 				$(value).css("background-color","#ccc");
 				$(value).html(index+1);
 			});
 			
 		});
 	   
-  });
+  	});
 
 </script>
 
